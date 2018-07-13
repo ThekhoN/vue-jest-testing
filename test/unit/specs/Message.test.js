@@ -3,9 +3,9 @@ import Message from "@/components/Message";
 import { mount } from "vue-test-utils";
 
 describe("Message", () => {
-  let cmp;
+  let wrapper;
   beforeEach(() => {
-    cmp = mount(Message, {
+    wrapper = mount(Message, {
       propsData: {
         message: "Hello there!"
       }
@@ -13,6 +13,6 @@ describe("Message", () => {
   });
 
   it("contains text matching message props", () => {
-    expect(cmp.text()).toContain("Hello there!");
+    expect(wrapper.text()).toContain("Hello there!");
   });
 });

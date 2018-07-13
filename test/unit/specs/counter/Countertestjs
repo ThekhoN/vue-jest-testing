@@ -1,0 +1,10 @@
+import Vue from "vue";
+import Counter from "@/components/counter/Counter";
+import { mount } from "vue-test-utils";
+
+describe("Counter", () => {
+  let wrapper;
+  beforeEach(() => {
+      wrapper = mount(Counter);
+  })
+});

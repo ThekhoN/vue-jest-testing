@@ -31,7 +31,7 @@ const getUpdatedCount = (count, type) => {
 };
 
 // these cause side effects
-const actions = {
+export const actions = {
   updateCountAsync: ({ commit, state }, { type }) => {
     const count = state.count;
     const updatedCount = getUpdatedCount(count, type);
