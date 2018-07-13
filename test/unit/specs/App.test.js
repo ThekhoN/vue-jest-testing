@@ -6,10 +6,9 @@ describe("App", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(App, {
-      data: () => ({
-        messages: ["Hello there General Kenobi!"]
-      })
+    wrapper = shallow(App);
+    wrapper.setData({
+      messages: ["Hello there General Kenobi!"]
     });
   });
 
