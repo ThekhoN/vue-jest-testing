@@ -1,14 +1,14 @@
 import axios from "axios";
 import { FETCH_URL, PUT_URL } from "../../../utils/url";
 
-const state = {
+export const state = {
   count: 0,
   loading: false,
   error: ""
 };
 
 // these mutate the state
-const mutations = {
+export const mutations = {
   updateCount(state, { payload }) {
     state.count = payload;
   },
@@ -20,7 +20,7 @@ const mutations = {
   }
 };
 
-const getUpdatedCount = (count, type) => {
+export const getUpdatedCount = (count, type) => {
   if (type === "INCREMENT") {
     return count + 1;
   } else if (type === "DECREMENT") {
@@ -71,7 +71,7 @@ export const actions = {
         });
       });
   },
-  fetchCountAsync: ({ commit /*, state*/ }) => {
+  fetchCountAsync: ({ commit }) => {
     commit({
       type: "updateLoading",
       payload: true
