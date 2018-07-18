@@ -85,7 +85,7 @@ describe("Count util - getUpdatedCount", () => {
     const updatedCount = getUpdatedCount(0, "INCREMENT");
     expect(updatedCount).toBe(1);
   });
-  it("decrements when type is INCREMENT", () => {
+  it("decrements when type is DECREMENT", () => {
     const updatedCount = getUpdatedCount(0, "DECREMENT");
     expect(updatedCount).toBe(-1);
   });
